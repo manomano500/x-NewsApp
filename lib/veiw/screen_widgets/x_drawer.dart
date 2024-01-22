@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../api/api_constans.dart';
 import '../../api/getData.dart';
 import '../../models/pages.dart';
-import 'page_screen.dart';
+import '../screens/page_screen.dart';
 
 class XDrawer extends StatefulWidget {
   const XDrawer({super.key});

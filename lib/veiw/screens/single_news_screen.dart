@@ -4,7 +4,7 @@ import 'package:x2/veiw/screen_widgets/news_headline.dart';
 
 import 'package:x2/veiw/screen_widgets/xapppar.dart';
 
-import '../api/removeAllHtmlTags.dart';
+import '../../api/removeAllHtmlTags.dart';
 
 
 

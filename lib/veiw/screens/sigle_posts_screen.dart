@@ -7,8 +7,8 @@ import 'package:x2/veiw/screen_widgets/xapppar.dart';
 import 'package:x2/api/getData.dart';
 
 
-import '../api/api_constans.dart';
-import '../constants/size_constants.dart';
+import '../../api/api_constans.dart';
+import '../../constants/size_constants.dart';
 
 class SinglePostsScreen extends StatefulWidget {
   const SinglePostsScreen({
@@ -49,6 +49,7 @@ class _SinglePostsScreenState extends State<SinglePostsScreen> {
     super.initState();
 
     fetchPosts();
+    print('singlepostsscreen');
   }
 
   @override
@@ -60,20 +61,17 @@ class _SinglePostsScreenState extends State<SinglePostsScreen> {
       },
       child: Scaffold(
         appBar: const XAppar(title: 'Latest Posts'),
-        body: Container( margin: const EdgeInsets.all(Sizes.dimen_16),
+        body: SingleChildScrollView(
+          child: SizedBox(
 
-          child: SingleChildScrollView(
-            child: SizedBox(
+            height: 700,
+            width: MediaQuery.sizeOf(context).width,
+            child: ListView.builder(
 
-              height: 700,
-              width: MediaQuery.sizeOf(context).width,
-              child: ListView.builder(
-
-                itemCount: posts.length,
-                itemBuilder: (context, index) {
-                  return NewsCard(post: posts[index]);
-                },
-              ),
+              itemCount: posts.length,
+              itemBuilder: (context, index) {
+                return NewsCard(post: posts[index]);
+              },
             ),
           ),
         ),

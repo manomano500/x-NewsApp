@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:x2/functions/removeAllHtmlTags.dart';
 
+import '../../api/removeAllHtmlTags.dart';
 import '../../models/post.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 

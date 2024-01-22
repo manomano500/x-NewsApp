@@ -13,7 +13,7 @@ class XAppar extends StatelessWidget implements PreferredSizeWidget{
       elevation: 0,
       title:  Text(title ?? 'X-NewsApp',style: GoogleFonts.abrilFatface(
           textStyle:
-          const TextStyle(color:AppColors.white, fontSize: 25, letterSpacing: 0.6)),),
+          const TextStyle(color:Colors.white, fontSize: 25, letterSpacing: 0.6)),),
       centerTitle: true,
       actions: [
         IconButton(

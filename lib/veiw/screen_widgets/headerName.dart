@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:x2/screens/single_news_screen.dart';
 
-import '../../screens/sigle_posts_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../screens/sigle_posts_screen.dart';
+
 class HeaderName extends StatelessWidget {
   final String headerName;
   const HeaderName({super.key,required this.headerName});

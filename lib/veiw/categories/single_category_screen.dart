@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:x2/functions/removeAllHtmlTags.dart';
 import 'package:x2/models/post.dart';
-import 'package:x2/screens/single_news_screen.dart';
-import 'package:x2/widgets/header/simple_card_news.dart';
-import 'package:x2/widgets/header/xapppar.dart';
+import 'package:x2/veiw/screen_widgets/simple_card_news.dart';
+import 'package:x2/veiw/screen_widgets/xapppar.dart';
 import 'package:x2/models/category.dart';
 
-import 'package:x2/functions/getData.dart';
+import 'package:x2/api/getData.dart';
 
-import 'package:dio/dio.dart';
 import 'package:x2/api/api_constans.dart';
+
+import '../screens/single_news_screen.dart';
 
 
 
@@ -62,7 +61,7 @@ class _SingleCategoryScreenState extends State<SingleCategoryScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: 500,
+              height: MediaQuery.of(context).size.height,
               width: MediaQuery.sizeOf(context).width,
               child: ListView.builder(
                 itemCount: categoryPosts.length,
@@ -72,7 +71,7 @@ class _SingleCategoryScreenState extends State<SingleCategoryScreen> {
                       Navigator.push(context, MaterialPageRoute(builder: (context)=>SingleNewsScreen( post:categoryPosts[index],)));
 
                     },
-                    child:SimpleCardNews(post: categoryPosts[index] ,),
+                    child:SimpleCardNews(post: categoryPosts[index] ,postLoading: false,),
                   );
 
               },

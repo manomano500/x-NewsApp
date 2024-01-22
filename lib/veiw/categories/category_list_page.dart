@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'single_category_screen.dart';
 
-import '../../functions/getData.dart';
+import '../../api/getData.dart';
 import '../../models/category.dart';
-import 'package:dio/dio.dart';
 import 'package:x2/api/api_constans.dart';
 
 
@@ -49,7 +48,8 @@ class _CategoryListPageState extends State<CategoryListPage> {
       children: [
         SingleChildScrollView(
           child: SizedBox(
-            height:600,
+            height: 700,
+
             child: ListView.builder(
                 itemCount: categories.length,
                 itemBuilder: (context, index) {

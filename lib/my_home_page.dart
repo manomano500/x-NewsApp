@@ -1,12 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:x2/screens/categories/category_list_page.dart';
-import 'package:x2/screens/home_screen.dart';
-import 'package:x2/screens/pages/x_drawer.dart';
-import 'package:x2/widgets/header/xapppar.dart';
+import 'package:x2/veiw/categories/category_list_page.dart';
+import 'package:x2/veiw/screen_widgets/x_drawer.dart';
 
-import 'functions/getData.dart';
-import 'models/category.dart';
+import 'package:x2/veiw/screen_widgets/xapppar.dart';
+import 'package:x2/veiw/screens/home_screen.dart';
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -56,19 +54,22 @@ class _MyHomePageState extends State<MyHomePage> {
           CategoryListPage(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar:  BottomNavigationBar(
+
         currentIndex: _currentIndex,
         onTap: (index) {
           _pageController.jumpToPage(index);
         },
         items: const [
+
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon:  Icon(Icons.home_filled),
+            label: 'Home'
+
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
-            label: 'Categories',
+              label: 'Categories'
           ),
         ],
       ),

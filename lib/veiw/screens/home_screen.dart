@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 import 'package:x2/veiw/screen_widgets/simple_card_news.dart';
 
-import '../api/api_constans.dart';
-import '../constants/size_constants.dart';
-import '../models/post.dart';
-import '../api/getData.dart';
-import 'screen_widgets/headerName.dart';
+import '../../api/api_constans.dart';
+import '../../constants/size_constants.dart';
+import '../../models/post.dart';
+import '../../api/getData.dart';
+import '../screen_widgets/headerName.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
