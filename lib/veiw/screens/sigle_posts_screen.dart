@@ -8,7 +8,6 @@ import 'package:x2/api/getData.dart';
 
 
 import '../../api/api_constans.dart';
-import '../../constants/size_constants.dart';
 
 class SinglePostsScreen extends StatefulWidget {
   const SinglePostsScreen({

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:x2/constants/color_constants.dart';
 
 
 import '../../api/removeAllHtmlTags.dart';
-import '../../constants/size_constants.dart';
 import '../../models/post.dart';
 import '../categories/single_category_screen.dart';
 import '../screens/single_news_screen.dart';
@@ -17,13 +17,14 @@ class SimpleCardNews extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
 
     return Card(
+      color: AppColors.back,
         shadowColor:Colors.black,
         elevation: 0,
         shape: const RoundedRectangleBorder(
             borderRadius:
-            BorderRadius.all(Radius.circular(Sizes.dimen_10))),
+            BorderRadius.all(Radius.circular(10))),
         margin: const EdgeInsets.fromLTRB(
-            Sizes.dimen_10, Sizes.dimen_8, Sizes.dimen_8, 0),
+            8, 6, 6, 0),
 
         child:   postLoading==true?
         const SizedBox(
@@ -47,8 +48,8 @@ class SimpleCardNews extends StatelessWidget implements PreferredSizeWidget{
 
                 ClipRRect(
                     borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(Sizes.dimen_10),
-                        topRight: Radius.circular(Sizes.dimen_10)),
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10)),
                     child: Image.network(
                       post.sourceImage ?? '',
                       height: 200,
@@ -61,7 +62,7 @@ class SimpleCardNews extends StatelessWidget implements PreferredSizeWidget{
                           elevation: 0,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
-                                  Sizes.dimen_10)),
+                                  10)),
                           child: const SizedBox(
                             height: 200,
                             width: double.infinity,
@@ -73,7 +74,7 @@ class SimpleCardNews extends StatelessWidget implements PreferredSizeWidget{
                Padding(
                  padding: EdgeInsets.all(14),
                  child: Column(
-                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                    crossAxisAlignment: CrossAxisAlignment.start,
                    children: [
                      InkWell(
@@ -87,8 +88,8 @@ class SimpleCardNews extends StatelessWidget implements PreferredSizeWidget{
 
                          child: Text(post.category_name!,
                            style: const TextStyle(
-                             color: Colors.blue,
-                             fontSize: Sizes.dimen_10 ,
+                             color: AppColors.burgundy,
+                             fontSize: 10 ,
                              decoration: TextDecoration.underline,
                            ),
                          ),
@@ -100,7 +101,7 @@ class SimpleCardNews extends StatelessWidget implements PreferredSizeWidget{
                        maxLines: 2,
                        style: const TextStyle(
                            color: Colors.black87,
-                           fontSize: Sizes.dimen_16,
+                           fontSize: 16,
                            fontWeight: FontWeight.w500),
                      ),
                      Text(
@@ -108,7 +109,7 @@ class SimpleCardNews extends StatelessWidget implements PreferredSizeWidget{
                        maxLines: 3,
                        style: const TextStyle(
                            color: Colors.black54,
-                           fontSize: Sizes.dimen_14),
+                           fontSize: 14),
                      ),
 
                    ],

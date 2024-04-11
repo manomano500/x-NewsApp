@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:x2/veiw/screen_widgets/simple_card_news.dart';
 
 import '../../api/api_constans.dart';
-import '../../constants/size_constants.dart';
 import '../../models/post.dart';
 import '../../api/getData.dart';
 import '../screen_widgets/headerName.dart';
@@ -69,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
           },
           child: Container (
-            margin: const EdgeInsets.all(20),
+            margin:  EdgeInsets.all(8),
 
             child: CustomScrollView(
 
@@ -79,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
             children: [
 
-            const Padding(padding: EdgeInsets.all(10),child: HeaderName(headerName: "Latest")),
+             Padding(padding: EdgeInsets.all(2),child: HeaderName(headerName: "Latest")),
                 Container(
                 margin: const EdgeInsets.only(right: 0),
                 height: 500,
@@ -92,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 ),
                 ),
-              const Padding(padding: EdgeInsets.all(10),child: HeaderName(headerName: "For You")),
+               Padding(padding: EdgeInsets.all(6),child: HeaderName(headerName: "For You")),
 
             ],
                 ),
@@ -102,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 (context, index) {
                 return Container(
                 height: 500,
-                margin: const EdgeInsets.fromLTRB(Sizes.dimen_4,Sizes.dimen_4,Sizes.dimen_2,Sizes.dimen_4),
+                margin: const EdgeInsets.fromLTRB(4,4,2,4),
                 child: SimpleCardNews(post: posts[index],postLoading: postLoading,),
                 );
                 },

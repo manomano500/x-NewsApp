@@ -6,20 +6,20 @@ Future<List> getData(String baseUrl, String endPoint, Function(Map<String, dynam
     dio.options.validateStatus = (status) => true;
     final response = await dio.get('$baseUrl$endPoint');
 
-    print("Raw response data: ${response.data}");
+   // print("Raw response data: ${response.data}");
 
     if (response.statusCode == 200) {
       dynamic data = response.data;
-      print("Data type: ${data.runtimeType}");
+     // print("Data type: ${data.runtimeType}");
       List responseList = data.map((item) => fromJson(item)).toList();
-      print("Response List: $responseList");
+      //print("Response List: $responseList");
       return responseList;
 
     } else {
-      throw Exception('Failed to load data statusCode = ${response.statusCode}');
+      throw Exception('Failed/ statusCode = ${response.statusCode}');
     }
   } catch (e) {
     print('Error: $e');
-    return []; // or handle the error appropriately
+    return [];
   }
 }

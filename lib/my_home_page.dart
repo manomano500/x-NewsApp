@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:x2/constants/color_constants.dart';
 import 'package:x2/veiw/categories/category_list_page.dart';
 import 'package:x2/veiw/screen_widgets/x_drawer.dart';
 
@@ -55,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       bottomNavigationBar:  BottomNavigationBar(
+        backgroundColor: AppColors.burgundy,
 
         currentIndex: _currentIndex,
         onTap: (index) {
@@ -69,7 +71,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
-              label: 'Categories'
+              label: 'Categories',
+
+
           ),
         ],
       ),

@@ -4,7 +4,10 @@ import '../models/post.dart';
 Dio dio = Dio();
 CancelToken cancelToken = CancelToken();
 
-String baseUrlEmbedded = 'http://192.168.0.101/x2/wp-json/wp/v2/';
+
+String host ="192.168.215.136";
+String WordPressProjectName ="x2";
+String baseUrlEmbedded = 'http://$host/$WordPressProjectName/wp-json/wp/v2/';
 
 
 String postsEndPoint = 'posts?_embed';

@@ -61,7 +61,7 @@ class _SingleCategoryScreenState extends State<SingleCategoryScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height,
+              height: 700,
               width: MediaQuery.sizeOf(context).width,
               child: ListView.builder(
                 itemCount: categoryPosts.length,

@@ -22,12 +22,12 @@ class XAppar extends StatelessWidget implements PreferredSizeWidget{
               Icons.search,
               color: Colors.black,
             )),
-        IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.add,
-              color: Colors.black,
-            )),
+        // IconButton(
+        //     onPressed: () {},
+        //     icon: const Icon(
+        //       Icons.add,
+        //       color: Colors.black,
+        //     )),
       ],
 
     );

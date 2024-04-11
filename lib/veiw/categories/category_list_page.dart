@@ -45,17 +45,18 @@ class _CategoryListPageState extends State<CategoryListPage> {
   @override
   Widget build(BuildContext context) {
     return Column(
+
       children: [
         SingleChildScrollView(
           child: SizedBox(
-            height: 700,
+            height:700,
 
             child: ListView.builder(
                 itemCount: categories.length,
                 itemBuilder: (context, index) {
 
                   return  Container(
-                    margin: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(5),
 
                       height: 60,
                       child: ListTile(

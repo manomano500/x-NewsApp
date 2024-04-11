@@ -21,18 +21,25 @@ class NewsHeadline extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.15,
+
+
+           // const SizedBox(height: 10),
+
+          Container(
+            margin: EdgeInsets.only(top: 10,bottom: 15),
+            
+            child: Image.network(post.sourceImage!, ),
           ),
           Text(
             removeAllHtmlTags(post.title.toString()) ?? 'Title',
             style:const TextStyle(
               fontWeight: FontWeight.bold,
+              fontSize: 20
 
-              height: 1.25,
+
             ),
           ),
-           const SizedBox(height: 10),
+
           HtmlWidget(post.content!)  ,
 
         ],

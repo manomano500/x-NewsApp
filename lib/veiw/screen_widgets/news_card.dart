@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:x2/models/post.dart';
 
 import '../../api/removeAllHtmlTags.dart';
-import '../../constants/size_constants.dart';
 import '../categories/single_category_screen.dart';
 import '../screens/single_news_screen.dart';
 
@@ -40,7 +39,7 @@ class NewsCard extends StatelessWidget {
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
-                            Sizes.dimen_10)),
+                           10)),
                     child: const SizedBox(
                       height: 200,
                       width: double.infinity,
